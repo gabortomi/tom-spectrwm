@@ -1,13 +1,10 @@
 #!/bin/sh
 
 setbg &		# Set the background
-# Switch to US international with Caps as Mod/Escape
-setxkbmap -option caps:super -variant altgr-intl && killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape' &
-setxkbmap --layout hu &
+setxkbmap -layout hu &
 # Properties button extra Mod/Escape
 xmodmap -e 'keycode 135 = Super_R' &
 xsetroot -cursor_name left_ptr &
-xset r rate 500 30 &	# Speed xrate up
 unclutter &		# Remove mouse when idle
 picom --config ~/.config/picom.conf &		# xcompmgr for transparency
 dunst &                 # dunst for notifications
