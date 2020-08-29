@@ -7,7 +7,7 @@ super + {_,shift + } Return
 
 # Dmenu and rofi(window switcher, application launcher)
 super + {_,shift +} d
-    {dmenu_run -nb '#c3cdc8' -nf '#000000' -sb '#2e8b57' -fn 'JetBrains Mono Medium-11' -p 'Search', rofi_run -r}
+    {dmenu_run -nb '#c3cdc8' -nf '#000000' -sb '#2e8b57' -fn 'JetBrains Mono Medium-11' -p 'Keresés', rofi_run -r}
 
 # Chat client, gui filemanager
 super + {_,shift + } p
