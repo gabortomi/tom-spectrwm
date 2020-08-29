@@ -85,16 +85,15 @@ super + F8
 super + {F9,F10}
     {dmenumount,dmenuumount}
 
-# Decrease volume -5
-F10
-    amixer set Master 5%-
 
-# Increase volume +5
-F11
-    amixer set Master 5%+
+# Volume Control
+{XF86AudioRaiseVolume, XF86AudioLowerVolume}
+	amixer set Master {5%+, 5%-}
 
 # Mute volume
-F12
+XF86AudioMute
    amixer set Master toggle
 
-
+# Brightness
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+	xbacklight {-inc 5%, -dec 5%}
